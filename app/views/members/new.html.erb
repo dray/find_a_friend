@@ -1,0 +1,20 @@
+<h1>Create Member</h1>
+
+<%= form_for @member, url: members_path do |f| %>
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+  <div>
+    <%= f.label :url %>
+    <%= f.text_field :original_url %>
+  </div>
+  <div>
+    <%= f.submit "Create" %>
+    <%= link_to "Return to Members", root_path%>
+  </div>
+<% end %>
