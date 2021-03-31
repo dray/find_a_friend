@@ -16,4 +16,18 @@ class MemberTest < ActiveSupport::TestCase
     assert_equal member.name, "Daniel Cox"
   end
 
+  test "has_many friendships" do
+    member_info = {first_name: 'Daniel', last_name: 'Cox', original_url: 'www.apple.com'}
+    member = Member.new(member_info)
+    
+    assert member.respond_to? :friendships
+  end
+  
+  test "has_many friends" do
+    member_info = {first_name: 'Daniel', last_name: 'Cox', original_url: 'www.apple.com'}
+    member = Member.new(member_info)
+    
+    assert member.respond_to? :friends
+  end
+
 end
