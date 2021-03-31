@@ -1,3 +1,24 @@
+# Find A Friend
+
+### Currently Live At
+
+* http://138.197.67.204/
+
+### Command to run tests via command line
+
+$ `rake`
+
+
+### Additional Thoughts
+
+In order to respect the time limit impossed, I opted to get the core functionality in place and in a state where a user can interact with it. The following items should be complete before it is ready for prime time!
+
+
+* Need to finish building out the test suite.
+* UI Markover is a MUST!
+
+
+
 # EverlyWell Backend Challenge
 
 ### Overview
