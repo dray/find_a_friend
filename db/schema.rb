@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_135658) do
+ActiveRecord::Schema.define(version: 2021_03_31_141956) do
 
   create_table "friendships", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2021_03_31_135658) do
     t.integer "member_id", null: false
     t.bigint "friend_id", null: false
     t.index ["member_id"], name: "index_friendships_on_member_id"
+  end
+
+  create_table "headers", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "member_id"
+    t.string "text"
+    t.index ["member_id"], name: "index_headers_on_member_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -30,4 +38,5 @@ ActiveRecord::Schema.define(version: 2021_03_31_135658) do
   end
 
   add_foreign_key "friendships", "members"
+  add_foreign_key "headers", "members"
 end

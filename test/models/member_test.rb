@@ -30,4 +30,11 @@ class MemberTest < ActiveSupport::TestCase
     assert member.respond_to? :friends
   end
 
+  test "has_many headers" do
+    member_info = {first_name: 'Daniel', last_name: 'Cox', original_url: 'www.apple.com'}
+    member = Member.new(member_info)
+    
+    assert member.respond_to? :headers
+  end
+
 end
