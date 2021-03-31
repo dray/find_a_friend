@@ -10,8 +10,6 @@ class UrlShortener
     new(*args).shorten_url
   end
   
-  private
-
   def shorten_url
     ShortURL.shorten(@member.original_url, :tinyurl)
   end
