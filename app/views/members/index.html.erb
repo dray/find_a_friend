@@ -1,0 +1,16 @@
+<h1>Members</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Short URL</th>
+    <th>Friend Count</th>
+  </tr>
+  <% @members.each do |member| %>
+    <tr>
+      <td><%= link_to full_name(member), member_path(member.id)%></td>
+      <td><%= member.short_url %></td>
+      <td><%= member.friends.size %></td>
+    </tr>
+  <% end %>
+</table>
+<%= button_to "Create New Member", new_member_url, method: :get %>
